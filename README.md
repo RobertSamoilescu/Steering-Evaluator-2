@@ -2,6 +2,11 @@
 
 One drawback of our <a href='https://github.com/RobertSamoilescu/Steering-Evaluator-1'> previous closed-loop evaluation </a> is that the simulator uses the same 2D perspective augmentation techniques present in the training dataset. We believe that there is a possibility that the bending objects may guide the policy to recover. We investigate this information leakage in our improved simulator by performing perspective augmentations that use the depth information and inpainting to avoid introducing artifacts in the evaluation procedure.
 
+* Pipeline
+<p align='center'>
+  <img src='sample/simulator.png' alt='pipeline' />
+</p>
+
 * 3D perspective augmentations
 <p align='center'>
   <img src='sample/new_sim.gif' alt='new simulation' />
