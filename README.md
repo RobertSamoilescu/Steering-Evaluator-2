@@ -59,7 +59,7 @@ For the inpaint, download the pre-trained model from <a href='https://drive.goog
 ## Results
 
 |Model      | Evaluation augmentation |  AG   | A    | NI     | MAD/MSTI | MAA/MSTI | VL+P    |
-|-----------|-------------------------|-----  |------|---- ---|----------|----------|---------|
+|-----------|-------------------------|-------|------|--------|----------|----------|---------|
 |ResNet18   |       2D                | No    | 0.67 |  248   |  0.0130  | 0.0731   | 4548.16 |  
 |ResNet18   |       3D                | No    | 0.69 |  228   |  0.0107  | 0.0675   | 4428.16 |
 |ResNet18   |       2D                | Yes   | 0.80 |  128   |  0.0048  | 0.0393   | 3828.16 |
@@ -72,5 +72,5 @@ The table displays the performance of the ResNet18 models, trained with and with
 python3 view.py
 ```
 <p align='center'>
-  <img src='https://github.com/RobertSamoilescu/Steering-Evaluator-1/blob/master/sample/interventions.png' alt='example intervention points'/>
+  <img src='https://github.com/RobertSamoilescu/Steering-Evaluator-1/blob/master/sample/interventions.png' alt='example intervention points' width=512/>
 </p>
