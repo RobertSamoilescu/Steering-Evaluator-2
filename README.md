@@ -43,6 +43,7 @@ mkdir ckpts
 ## Load augmentation pipeline models
 
 ```shell
+mkdir -p pipeline/models
 cd pipeline/models/monodepth
 ```
 For monodepth, download the pre-trained models from <a href='https://drive.google.com/drive/folders/18kTR4PaRlQIeEFJ2gNkiXYnFcTfyrRNH?usp=sharing'>here</a>
