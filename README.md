@@ -1,5 +1,7 @@
 # Steering-Evaluator-2
 
+One drawback of our <a href='https://github.com/RobertSamoilescu/Steering-Evaluator-1'> previous closed-loop evaluation </a> is that the simulator uses the same 2D perspective augmentation techniques present in the training dataset. We believe that there is a possibility that the bending objects may guide the policy to recover. We investigate this information leakage in our improved simulator by performing perspective augmentations that use the depth information and inpainting to avoid introducing artifacts in the evaluation procedure.
+
 <p align='center'>
   <img src='sample/new_sim.gif' alt='new simulation' />
 </p>
@@ -56,11 +58,19 @@ For the inpaint, download the pre-trained model from <a href='https://drive.goog
 
 ## Results
 
+|Model      | Evaluation augmentation |  AG   | A    | NI     | MAD/MSTI | MAA/MSTI | VL+P    |
+|-----------|-------------------------|-----  |------|---- ---|----------|----------|---------|
+|ResNet18   |       2D                | No    | 0.67 |  248   |  0.0130  | 0.0731   | 4548.16 |  
+|ResNet18   |       3D                | No    | 0.69 |  228   |  0.0107  | 0.0675   | 4428.16 |
+|ResNet18   |       2D                | Yes   | 0.80 |  128   |  0.0048  | 0.0393   | 3828.16 |
+|ResNet18   |       3D                | Yes   | 0.75 |  170   |  0.0073  | 0.0494   | 4080.16 |  
 
+The table displays the performance of the ResNet18 models, trained with and without 2D augmentation, in the two simulators. We observe a significant drop of 5% in autonomy, which supports our hypothesis that there exist data leakages in our previous closed-loop evaluation method. The discrepancy in the results of the 2D augmentation method is emphasized in autonomy improvement when evaluated with the improved simulator.
 
 ## View intervention points
 ```shell
 python3 view.py
 ```
-
-
+<p align='center'>
+  <img src='https://github.com/RobertSamoilescu/Steering-Evaluator-1/blob/master/sample/interventions.png' alt='example intervention points'/>
+</p>
