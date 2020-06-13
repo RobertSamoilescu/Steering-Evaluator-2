@@ -25,7 +25,7 @@ mkdir scene_splits
 In the "scene_splits" directory you should have: "train_scenes.txt" and "test_scenes.txt".
 
 
-## Load models
+## Load steering models
 
 ```shell
 mkdir ckpts
@@ -34,3 +34,33 @@ mkdir ckpts
 * Train models using <a href="https://github.com/RobertSamoilescu/Steering-Network-1">this repo</a>
 
 * Copy the folders inside the snapshots dir into the ckpts dir.
+
+
+## Load augmentation pipeline models
+
+```shell
+cd pipeline/models/monodepth
+```
+For monodepth, download the pre-trained models from <a href='https://drive.google.com/drive/folders/18kTR4PaRlQIeEFJ2gNkiXYnFcTfyrRNH?usp=sharing'>here</a>
+
+```shell
+cd pipeline/models/inpaint
+```
+For the inpaint, download the pre-trained model from <a href='https://drive.google.com/drive/folders/1oeVxVnR5BIZ1QM-ClY6Xa4CogxTQzmZx?usp=sharing'>here</a>
+
+
+## Run multiple simulations
+```shell
+./multiple_runs.sh
+```
+
+## Results
+
+
+
+## View intervention points
+```shell
+python3 view.py
+```
+
+
