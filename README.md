@@ -60,6 +60,16 @@ cd pipeline/models/inpaint
 For the inpaint, download the pre-trained model from <a href='https://drive.google.com/drive/folders/1oeVxVnR5BIZ1QM-ClY6Xa4CogxTQzmZx?usp=sharing'>here</a>
 
 
+
+## Train
+
+* Train models using <a href='https://github.com/RobertSamoilescu/Steering-Network-1'>this repo</a>.
+```shell
+mkdir ckpts
+```
+* The trained models are in the "snapshots" folder (in the above repo). Copy the directories from the "snapshots" folder to "ckpts" folder.
+
+
 ## Run multiple simulations
 ```shell
 ./multiple_runs.sh
