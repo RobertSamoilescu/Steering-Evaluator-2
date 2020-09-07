@@ -75,16 +75,16 @@ mkdir ckpts
 ./multiple_runs.sh
 ```
 
-## Results
+%## Results
 
-|Model      | Evaluation augmentation |  AG   | A    | NI     | MAD/MSTI | MAA/MSTI | VL+P    |
-|-----------|-------------------------|-------|------|--------|----------|----------|---------|
-|ResNet18   |       2D                | No    | 0.67 |  248   |  0.0130  | 0.0731   | 4548.16 |  
-|ResNet18   |       3D                | No    | 0.69 |  228   |  0.0107  | 0.0675   | 4428.16 |
-|ResNet18   |       2D                | Yes   | 0.80 |  128   |  0.0048  | 0.0393   | 3828.16 |
-|ResNet18   |       3D                | Yes   | 0.75 |  170   |  0.0073  | 0.0494   | 4080.16 |  
+%|Model      | Evaluation augmentation |  AG   | A    | NI     | MAD/MSTI | MAA/MSTI | VL+P    |
+%|-----------|-------------------------|-------|------|--------|----------|----------|---------|
+%|ResNet18   |       2D                | No    | 0.67 |  248   |  0.0130  | 0.0731   | 4548.16 |  
+%|ResNet18   |       3D                | No    | 0.69 |  228   |  0.0107  | 0.0675   | 4428.16 |
+%|ResNet18   |       2D                | Yes   | 0.80 |  128   |  0.0048  | 0.0393   | 3828.16 |
+%|ResNet18   |       3D                | Yes   | 0.75 |  170   |  0.0073  | 0.0494   | 4080.16 |  
 
-The table displays the performance of the ResNet18 models, trained with and without 2D augmentation, in the two simulators. We observe a significant drop of 5% in autonomy, which supports our hypothesis that there exist data leakages in our previous closed-loop evaluation method. The discrepancy in the results of the 2D augmentation method is emphasized in autonomy improvement when evaluated with the improved simulator.
+%The table displays the performance of the ResNet18 models, trained with and without 2D augmentation, in the two simulators. We observe a significant drop of 5% %in autonomy, which supports our hypothesis that there exist data leakages in our previous closed-loop evaluation method. The discrepancy in the results of the 2D %augmentation method is emphasized in autonomy improvement when evaluated with the improved simulator.
 
 ## View intervention points
 ```shell
