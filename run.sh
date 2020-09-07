@@ -9,6 +9,8 @@ CUDA_VISIBLE_DEVICES=$DEVICE python3 test.py \
 	--end $END \
 	--model $MODEL \
 	--use_speed \
+	--use_augm \
+	--use_balance \
 	--split_path scene_splits/test_scenes.txt\
 	--data_path raw_dataset\
 	> "print_logs/"$MODEL"_"$BEGIN"_"$END".txt" 2>&1

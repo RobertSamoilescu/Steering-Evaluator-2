@@ -23,6 +23,8 @@ import pickle as pkl
 from tqdm import tqdm
 import PIL.Image as pil
 import scipy.stats as stats
+import numpy as np
+import random
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--begin', type=int, help="starting video index", default=0)
@@ -35,12 +37,15 @@ parser.add_argument('--vis_dir', type=str, help='checkpoints dir', default='snap
 parser.add_argument('--load_model', type=str, help='name of the model', default='default')
 parser.add_argument('--use_speed', action='store_true')
 parser.add_argument('--use_augm', action='store_true')
+parser.add_argument('--use_balance', action='store_true')
 parser.add_argument('--split_path', type=str, help='path to the file containing the test scenes (test_scenes.txt)')
 parser.add_argument('--data_path', type=str, help='path to the raw dataset directory (.mov & .json)')
 args = parser.parse_args()
 
 # set seed
 torch.manual_seed(0)
+np.random.seed(0)
+random.seed(0)
 
 # get available divice
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -66,6 +71,8 @@ if args.use_speed:
     experiment += "_speed"
 if args.use_augm:
     experiment += "_augm"
+if args.use_balance:
+    experiment += "_balance"
 
 model = model.to(device)
 
